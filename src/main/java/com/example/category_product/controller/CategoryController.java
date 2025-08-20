@@ -65,5 +65,7 @@ public class CategoryController {
         } else {
             return ResponseEntity.status(404).body(new ApiResponse<>("Category not found", null));
         }
+        
     }
+
 }
