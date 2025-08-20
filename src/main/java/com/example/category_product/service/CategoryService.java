@@ -29,12 +29,18 @@ public class CategoryService {
         return categoryRepository.findById(id);
     }
 
-    public Category updateCategory(Long id, Category category) {
-        category.setId(id);
-        return categoryRepository.save(category);
+    public Optional<Category> updateCategory(Long id, Category category) {
+        return categoryRepository.findById(id).map(existing -> {
+            category.setId(id);
+            return categoryRepository.save(category);
+        });
     }
 
-    public void deleteCategory(Long id) {
-        categoryRepository.deleteById(id);
+    public boolean deleteCategory(Long id) {
+        if (categoryRepository.existsById(id)) {
+            categoryRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 }
