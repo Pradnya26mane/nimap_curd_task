@@ -1,0 +1,10 @@
+com\example\category_product\entity\Category.class
+com\example\category_product\service\CategoryService.class
+com\example\category_product\controller\ProductController.class
+com\example\category_product\repository\ProductRepository.class
+com\example\category_product\service\ProductService.class
+com\example\category_product\dto\ApiResponse.class
+com\example\category_product\repository\CategoryRepository.class
+com\example\category_product\entity\Product.class
+com\example\category_product\CategoryProductApplication.class
+com\example\category_product\controller\CategoryController.class
